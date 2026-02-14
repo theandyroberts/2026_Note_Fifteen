@@ -3,3 +3,4 @@ leads.db
 leads.db-wal
 leads.db-shm
 *.png
+!toulouse-lautrec-infographic.png

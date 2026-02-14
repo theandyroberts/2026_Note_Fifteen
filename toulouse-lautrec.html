@@ -194,6 +194,66 @@
             color: #111;
         }
 
+        .tldr-link {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #888;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .tldr-link:hover {
+            color: #111;
+        }
+
+        /* INFOGRAPHIC MODAL */
+        .ig-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 200;
+            background: rgba(120, 120, 120, 0.85);
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            cursor: pointer;
+        }
+
+        .ig-overlay.active {
+            display: flex;
+        }
+
+        .ig-overlay img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+        }
+
+        .ig-close {
+            position: fixed;
+            top: 1.25rem;
+            right: 1.5rem;
+            z-index: 210;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            font-family: -apple-system, sans-serif;
+            line-height: 1;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+            transition: opacity 0.2s ease;
+        }
+
+        .ig-close:hover {
+            opacity: 0.7;
+        }
+
         /* AUDIO PLAYER */
         .audio-row {
             display: flex;
@@ -436,6 +496,7 @@
 
             <div class="intro">
                 <strong>Henri de Toulouse-Lautrec</strong> is immortalized as the chronicler of Parisian nightlife, the creator of iconic Moulin Rouge posters, and the artist who captured the Belle Époque like no other. But beneath the famous imagery lies a life far stranger and more tragic than the myths suggest.
+                <a class="tldr-link" id="tldr-open">TL;DR? View the infographic &rarr;</a>
             </div>
 
             <div class="audio-row">
@@ -536,6 +597,29 @@
     <footer class="site-footer">
         <p>&copy; 2026 Note Fifteen. AI + WordPress. Done Right.</p>
     </footer>
+
+    <!-- INFOGRAPHIC MODAL -->
+    <div class="ig-overlay" id="ig-modal">
+        <button class="ig-close" id="ig-close">&times;</button>
+        <img src="/toulouse-lautrec-infographic.png" alt="Toulouse-Lautrec infographic — From the Moulin Rouge to Music City">
+    </div>
+
+    <script>
+        const igModal = document.getElementById('ig-modal');
+        document.getElementById('tldr-open').addEventListener('click', () => {
+            igModal.classList.add('active');
+        });
+        document.getElementById('ig-close').addEventListener('click', (e) => {
+            e.stopPropagation();
+            igModal.classList.remove('active');
+        });
+        igModal.addEventListener('click', (e) => {
+            if (e.target === igModal) igModal.classList.remove('active');
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') igModal.classList.remove('active');
+        });
+    </script>
 
 </body>
 </html>
