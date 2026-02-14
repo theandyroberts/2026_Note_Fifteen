@@ -34,11 +34,14 @@
             font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
             background-color: var(--black);
             color: var(--white);
-            line-height: 1.7;
+            margin: 0;
+            padding: 0;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* NAV */
+        /* ===================== */
+        /* SITE CHROME — NAV     */
+        /* ===================== */
         nav {
             position: fixed;
             top: 0;
@@ -86,105 +89,122 @@
             color: var(--yellow);
         }
 
-        /* ARTICLE LAYOUT */
-        .article-container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 120px 24px 60px;
+        /* ===================== */
+        /* SITE CHROME — FOOTER  */
+        /* ===================== */
+        .site-footer {
+            background: var(--black);
+            border-top: 1px solid #1A1A1A;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #444;
         }
 
-        /* ARTICLE HEADER */
-        .article-header {
-            margin-bottom: 3rem;
-            padding-bottom: 2.5rem;
-            border-bottom: 1px solid #222;
+        .site-footer a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .site-footer a:hover {
+            color: var(--yellow);
+        }
+
+        /* ===================== */
+        /* ARTICLE — WHITE BODY  */
+        /* ===================== */
+        .article-body {
+            background: #fafafa;
+            padding-top: 70px; /* clear the fixed nav */
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        header {
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         .meta {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 0.9rem;
+            font-size: 13px;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--yellow);
-            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            color: #666;
+            margin-bottom: 16px;
         }
 
-        .article-header h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(2.5rem, 7vw, 3.5rem);
-            font-weight: 400;
-            line-height: 1.05;
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            color: var(--white);
-        }
-
-        .article-header h1 .accent {
-            color: var(--yellow);
+        .container h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #111;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            text-transform: none;
+            letter-spacing: normal;
         }
 
         .subtitle {
-            font-size: 1.15rem;
-            color: var(--gray);
+            font-size: 20px;
+            color: #555;
             font-weight: 400;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
-        /* ARTICLE BODY */
-        h2 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(1.8rem, 5vw, 2.5rem);
-            font-weight: 400;
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
-            margin: 3.5rem 0 1.5rem;
-            color: var(--white);
-            line-height: 1.1;
+        .container h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 60px 0 24px;
+            color: #111;
+            line-height: 1.3;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            text-transform: none;
+            letter-spacing: normal;
         }
 
-        h2 .accent {
-            color: var(--yellow);
-        }
-
-        h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.15rem;
+        .container h3 {
+            font-size: 20px;
             font-weight: 600;
-            margin: 2rem 0 0.75rem;
-            color: var(--white);
+            margin: 32px 0 12px;
+            color: #222;
         }
 
-        p {
-            margin-bottom: 1.25rem;
-            font-size: 1.05rem;
-            color: var(--light-gray);
-            line-height: 1.8;
+        .container p {
+            margin-bottom: 20px;
+            font-size: 17px;
+            color: #333;
+            line-height: 1.7;
         }
 
         .intro {
-            font-size: 1.1rem;
-            color: var(--light-gray);
-            margin-bottom: 2.5rem;
-            padding: 1.5rem;
-            background: var(--dark-card);
-            border-left: 4px solid var(--yellow);
-            line-height: 1.8;
+            font-size: 19px;
+            color: #444;
+            margin-bottom: 40px;
+            padding: 24px;
+            background: #f0f0f0;
+            border-left: 4px solid #111;
         }
 
         .intro strong {
-            color: var(--white);
+            color: #111;
         }
 
         /* AUDIO PLAYER */
         .audio-row {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            background: var(--dark-card);
-            border: 1px solid #2A2A2A;
-            padding: 1rem 1.25rem;
-            margin-bottom: 2.5rem;
+            gap: 14px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
         .audio-row .audio-icon {
@@ -192,12 +212,16 @@
             width: 40px;
             height: 40px;
             background: var(--yellow);
+            border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1rem;
-            color: var(--black);
-            font-weight: 700;
+        }
+
+        .audio-row .audio-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: var(--black);
         }
 
         .audio-row .audio-info {
@@ -206,17 +230,18 @@
         }
 
         .audio-row .audio-label {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 0.9rem;
+            font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--yellow);
+            letter-spacing: 2px;
+            color: #666;
             line-height: 1.2;
+            margin-bottom: 2px;
         }
 
         .audio-row .audio-title {
-            font-size: 0.85rem;
-            color: var(--gray);
+            font-size: 15px;
+            color: #222;
+            font-weight: 600;
             line-height: 1.3;
         }
 
@@ -225,10 +250,162 @@
             height: 36px;
             max-width: 260px;
             width: 100%;
-            filter: invert(1) hue-rotate(180deg) brightness(0.85) contrast(1.1);
+        }
+
+        /* MYTH BOXES */
+        .myth-box {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .myth-box h3 {
+            margin-top: 0;
+            color: #c41e3a;
+        }
+
+        .myth-box h3::before {
+            content: "\2715  ";
+            color: #c41e3a;
+        }
+
+        .truth {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px dashed #ddd;
+        }
+
+        .truth strong {
+            color: #2d7d32;
+        }
+
+        .truth strong::before {
+            content: "\2713  ";
+        }
+
+        .highlight {
+            background: #fff9c4;
+            padding: 2px 6px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        /* STORY BOXES */
+        .story-box {
+            background: #fff;
+            border-left: 4px solid #111;
+            padding: 24px 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .story-box h3 {
+            margin-top: 0;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+        }
+
+        /* QUOTE */
+        .quote {
+            font-style: italic;
+            font-size: 20px;
+            color: #555;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 40px 0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .quote cite {
+            display: block;
+            margin-top: 12px;
+            font-size: 14px;
+            font-style: normal;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .container ul {
+            margin: 20px 0;
+            padding-left: 24px;
+        }
+
+        .container li {
+            margin-bottom: 12px;
+            font-size: 17px;
+            color: #333;
+        }
+
+        /* TAGS & FOOTER AREA */
+        .article-footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #111;
+            color: #fff;
+            padding: 6px 14px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .article-note {
+            margin-top: 24px;
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* BACK LINK */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #666;
+            text-decoration: none;
+            margin-top: 32px;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: #111;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.25rem;
+            }
         }
 
         @media (max-width: 600px) {
+            .container h1 {
+                font-size: 32px;
+            }
+
+            .container h2 {
+                font-size: 24px;
+            }
+
+            .container {
+                padding: 40px 20px;
+            }
+
             .audio-row {
                 flex-wrap: wrap;
             }
@@ -238,207 +415,6 @@
                 width: 100%;
             }
         }
-
-        /* MYTH BOXES */
-        .myth-box {
-            background: var(--dark-card);
-            border: 1px solid #2A2A2A;
-            border-radius: 0;
-            padding: 1.75rem;
-            margin-bottom: 1.5rem;
-            box-shadow: none;
-            transition: border-color 0.2s ease;
-        }
-
-        .myth-box:hover {
-            border-color: #444;
-        }
-
-        .myth-box h3 {
-            margin-top: 0;
-            color: #E85D75;
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .myth-box h3::before {
-            content: "✕ ";
-            color: #E85D75;
-        }
-
-        .myth-box p {
-            color: var(--gray);
-        }
-
-        .truth {
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid #2A2A2A;
-        }
-
-        .truth strong {
-            color: var(--yellow);
-        }
-
-        .truth strong::before {
-            content: "✓ ";
-        }
-
-        .truth p {
-            color: var(--light-gray);
-        }
-
-        .highlight {
-            background: rgba(245, 197, 24, 0.15);
-            color: var(--yellow);
-            padding: 2px 6px;
-            font-weight: 500;
-        }
-
-        /* STORY BOXES */
-        .story-box {
-            background: var(--dark-card);
-            border-left: 4px solid var(--yellow);
-            padding: 1.5rem 1.75rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .story-box h3 {
-            margin-top: 0;
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--yellow);
-        }
-
-        .story-box p {
-            color: var(--light-gray);
-        }
-
-        /* QUOTE */
-        .quote {
-            font-style: italic;
-            font-size: 1.3rem;
-            color: var(--gray);
-            text-align: center;
-            padding: 2.5rem 1.5rem;
-            margin: 2.5rem 0;
-            border-top: 1px solid #222;
-            border-bottom: 1px solid #222;
-        }
-
-        .quote cite {
-            display: block;
-            margin-top: 0.75rem;
-            font-size: 0.85rem;
-            font-style: normal;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        /* TAGS */
-        .tags {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid #222;
-        }
-
-        .tag {
-            display: inline-block;
-            background: var(--dark-card);
-            border: 1px solid #2A2A2A;
-            color: var(--gray);
-            padding: 0.4rem 0.9rem;
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .article-note {
-            margin-top: 1.5rem;
-            font-size: 0.9rem;
-            color: #555;
-        }
-
-        /* BACK LINK */
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--yellow);
-            text-decoration: none;
-            margin-top: 2.5rem;
-            transition: opacity 0.2s ease;
-        }
-
-        .back-link:hover {
-            opacity: 0.7;
-        }
-
-        .back-link .arrow {
-            transition: transform 0.2s ease;
-        }
-
-        .back-link:hover .arrow {
-            transform: translateX(-3px);
-        }
-
-        ul {
-            margin: 1.25rem 0;
-            padding-left: 1.5rem;
-        }
-
-        li {
-            margin-bottom: 0.75rem;
-            font-size: 1.05rem;
-            color: var(--light-gray);
-        }
-
-        /* FOOTER */
-        footer {
-            border-top: 1px solid #1A1A1A;
-            padding: 2rem;
-            text-align: center;
-            font-size: 0.8rem;
-            color: #444;
-        }
-
-        footer a {
-            color: #666;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: var(--yellow);
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            nav {
-                padding: 1rem 1.25rem;
-            }
-
-            .article-container {
-                padding: 100px 20px 40px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .article-header h1 {
-                font-size: 2.2rem;
-            }
-        }
     </style>
 </head>
 <body>
@@ -446,114 +422,118 @@
     <!-- NAV -->
     <nav>
         <a href="/" class="logo">NOTE<span>FIFTEEN</span></a>
-        <a href="/" class="cta-nav">Home <span class="arrow">→</span></a>
+        <a href="/" class="cta-nav">Home <span class="arrow">&rarr;</span></a>
     </nav>
 
-    <div class="article-container">
-        <header class="article-header">
-            <div class="meta">Art History / Gallery Notes</div>
-            <h1>Toulouse-Lautrec:<br><span class="accent">Myths & Untold Stories</span></h1>
-            <p class="subtitle">The real story behind the posters — separating fact from fiction about Paris's most famous dwarf artist</p>
-        </header>
+    <!-- ARTICLE -->
+    <div class="article-body">
+        <div class="container">
+            <header>
+                <div class="meta">Art History / Gallery Notes</div>
+                <h1>Toulouse-Lautrec: Myths &amp; Untold Stories</h1>
+                <p class="subtitle">The real story behind the posters — separating fact from fiction about Paris's most famous dwarf artist</p>
+            </header>
 
-        <div class="intro">
-            <strong>Henri de Toulouse-Lautrec</strong> is immortalized as the chronicler of Parisian nightlife, the creator of iconic Moulin Rouge posters, and the artist who captured the Belle Époque like no other. But beneath the famous imagery lies a life far stranger and more tragic than the myths suggest.
-        </div>
-
-        <div class="audio-row">
-            <div class="audio-icon">▶</div>
-            <div class="audio-info">
-                <div class="audio-label">Podcast</div>
-                <div class="audio-title">How Toulouse-Lautrec Invented Modern Branding</div>
+            <div class="intro">
+                <strong>Henri de Toulouse-Lautrec</strong> is immortalized as the chronicler of Parisian nightlife, the creator of iconic Moulin Rouge posters, and the artist who captured the Belle Époque like no other. But beneath the famous imagery lies a life far stranger and more tragic than the myths suggest.
             </div>
-            <audio controls preload="none">
-                <source src="https://img.quizzydots.com/How_Toulouse-Lautrec_Invented_Modern_Branding.m4a" type="audio/mp4">
-            </audio>
-        </div>
 
-        <h2>Common <span class="accent">Myths & Misconceptions</span></h2>
+            <div class="audio-row">
+                <div class="audio-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1C7.03 1 3 5.03 3 10v4c0 1.1.9 2 2 2h1v-6H5v-0c0-3.87 3.13-7 7-7s7 3.13 7 7v0h-1v6h1c1.1 0 2-.9 2-2v-4c0-4.97-4.03-9-9-9zM7 12v4H5v-4h2zm12 4h-2v-4h2v4z"/></svg>
+                </div>
+                <div class="audio-info">
+                    <div class="audio-label">Podcast</div>
+                    <div class="audio-title">How Toulouse-Lautrec Invented Modern Branding</div>
+                </div>
+                <audio controls preload="none">
+                    <source src="https://img.quizzydots.com/How_Toulouse-Lautrec_Invented_Modern_Branding.m4a" type="audio/mp4">
+                </audio>
+            </div>
 
-        <div class="myth-box">
-            <h3>Myth: His dwarfism was caused by a riding accident</h3>
-            <p>For decades, art historians repeated the story that a childhood horseback riding accident stunted Toulouse-Lautrec's growth.</p>
-            <div class="truth">
-                <p><strong>Truth:</strong> It was actually a "trifecta of bad luck." First, his parents were first cousins — a common practice in French aristocracy that left him with genetic vulnerabilities. Then, at age 13, he fractured his right femur. At 14, he fractured the left. Neither break healed properly due to an underlying condition now believed to be <span class="highlight">pycnodysostosis</span> — so rare that it's now officially called "Toulouse-Lautrec Syndrome."</p>
+            <h2>Common Myths &amp; Misconceptions</h2>
+
+            <div class="myth-box">
+                <h3>Myth: His dwarfism was caused by a riding accident</h3>
+                <p>For decades, art historians repeated the story that a childhood horseback riding accident stunted Toulouse-Lautrec's growth.</p>
+                <div class="truth">
+                    <p><strong>Truth:</strong> It was actually a "trifecta of bad luck." First, his parents were first cousins — a common practice in French aristocracy that left him with genetic vulnerabilities. Then, at age 13, he fractured his right femur. At 14, he fractured the left. Neither break healed properly due to an underlying condition now believed to be <span class="highlight">pycnodysostosis</span> — so rare that it's now officially called "Toulouse-Lautrec Syndrome."</p>
+                </div>
+            </div>
+
+            <div class="myth-box">
+                <h3>Myth: He was a respected "fine artist" from the start</h3>
+                <p>Many assume Toulouse-Lautrec was celebrated as a serious painter throughout his career.</p>
+                <div class="truth">
+                    <p><strong>Truth:</strong> The art establishment dismissed him as merely a <span class="highlight">"lowly poster artist"</span> for cabarets and nightclubs. His first real notoriety came from an 1891 poster for the Moulin Rouge featuring La Goulue — a dancer infamous for grabbing patrons' drinks mid-performance (and, according to gossip, sometimes performing without undergarments).</p>
+                </div>
+            </div>
+
+            <div class="myth-box">
+                <h3>Myth: The black hat was just fashion</h3>
+                <p>Toulouse-Lautrec's signature bowler hat is often described as a style choice — perhaps to add sophistication to his diminutive frame.</p>
+                <div class="truth">
+                    <p><strong>Truth:</strong> He wore it to conceal <span class="highlight">open fontanelles</span> — soft spots on the skull that never closed, another symptom of his genetic condition. He privately admitted the hat also added "an extra inch or two of height."</p>
+                </div>
+            </div>
+
+            <h2>Fascinating Little-Known Stories</h2>
+
+            <div class="story-box">
+                <h3>The Hollow Cane Trick</h3>
+                <p>Toulouse-Lautrec hollowed out his walking cane and filled it with absinthe, ensuring he'd never be caught without his drink of choice. It was, as one biographer noted, a "crutch that did double duty" — both mobility aid and portable bar.</p>
+            </div>
+
+            <div class="story-box">
+                <h3>Jane Avril: The "Damaged" Muse</h3>
+                <p>His most-painted subject, Jane Avril, was nicknamed <span class="highlight">"Le Mélinite"</span> (French dynamite) for her explosive, possessed dancing style. But her artistry emerged from trauma — she had survived brutal childhood abuse and contracted St. Vitus Dance, which caused facial tics and uncontrollable limb spasms.</p>
+                <p>After being "cured" in a mental hospital, she turned those very symptoms into her signature style. Toulouse-Lautrec and Avril bonded as "damaged goods" — two outcasts who found belonging in Montmartre's demimonde. He painted her more than any other figure.</p>
+            </div>
+
+            <div class="story-box">
+                <h3>The Circus in the Asylum</h3>
+                <p>In 1899, after a very public breakdown in a brothel — where friends found him shooting at invisible spiders, convinced police were hunting him and "ill-meaning dogs" lurked everywhere — his mother had him committed to a private insane asylum.</p>
+                <p>While institutionalized, he produced <span class="highlight">39 circus portraits</span> — some of the most vibrant work of his career, created during three months of confinement.</p>
+            </div>
+
+            <div class="story-box">
+                <h3>Aristocratic Inbreeding's Toll</h3>
+                <p>Toulouse-Lautrec wasn't the only casualty of his family's cousin-marriage tradition. At least three cousins also had dwarfism and congenital defects. One female relative was so fragile she lived her <span class="highlight">entire life in a baby carriage</span>.</p>
+            </div>
+
+            <div class="quote">
+                "Le vieux con!"
+                <cite>— Toulouse-Lautrec's reported last words, referring to his father</cite>
+            </div>
+
+            <div class="story-box">
+                <h3>The "Totalizing" Artist</h3>
+                <p>When performer Yvette Guilbert complained that his paintings didn't capture enough detail of her face, Toulouse-Lautrec replied with what might be his most truthful artistic statement:</p>
+                <p style="font-style: italic; margin-top: 16px;">"Ma chère, I don't detail you, I totalize you."</p>
+            </div>
+
+            <h2>The Final Collapse</h2>
+
+            <p>By 1901, years of alcoholism and tertiary syphilis (contracted from a Montmartre prostitute) took their toll. A series of strokes began in March, leaving him increasingly paralyzed. On September 9, 1901, a final stroke ended his life at just 36 years old.</p>
+
+            <p>His mother, the Comtesse Adèle, would spend the rest of her life ensuring his legacy. She built the <strong>Musée Toulouse-Lautrec</strong> in his hometown of Albi — which today holds the world's most extensive collection of his work: 5,084 drawings, 737 paintings, 363 prints and posters, 275 watercolors, and countless ceramic and glass pieces.</p>
+
+            <div class="intro" style="margin-top: 40px;">
+                <strong>For your gallery opening:</strong> Toulouse-Lautrec's story resonates because he transformed personal suffering into art that captured an era. His paintings of dancers, prostitutes, and performers weren't exploitation — they were empathy from someone who understood what it meant to exist on society's margins.
+            </div>
+
+            <div class="article-footer">
+                <span class="tag">Art History</span>
+                <span class="tag">Post-Impressionism</span>
+                <span class="tag">Belle Époque</span>
+                <p class="article-note">Research compiled for gallery opening event</p>
+                <a href="/" class="back-link">&larr; Back to Note Fifteen</a>
             </div>
         </div>
-
-        <div class="myth-box">
-            <h3>Myth: He was a respected "fine artist" from the start</h3>
-            <p>Many assume Toulouse-Lautrec was celebrated as a serious painter throughout his career.</p>
-            <div class="truth">
-                <p><strong>Truth:</strong> The art establishment dismissed him as merely a <span class="highlight">"lowly poster artist"</span> for cabarets and nightclubs. His first real notoriety came from an 1891 poster for the Moulin Rouge featuring La Goulue — a dancer infamous for grabbing patrons' drinks mid-performance (and, according to gossip, sometimes performing without undergarments).</p>
-            </div>
-        </div>
-
-        <div class="myth-box">
-            <h3>Myth: The black hat was just fashion</h3>
-            <p>Toulouse-Lautrec's signature bowler hat is often described as a style choice — perhaps to add sophistication to his diminutive frame.</p>
-            <div class="truth">
-                <p><strong>Truth:</strong> He wore it to conceal <span class="highlight">open fontanelles</span> — soft spots on the skull that never closed, another symptom of his genetic condition. He privately admitted the hat also added "an extra inch or two of height."</p>
-            </div>
-        </div>
-
-        <h2>Fascinating <span class="accent">Little-Known Stories</span></h2>
-
-        <div class="story-box">
-            <h3>The Hollow Cane Trick</h3>
-            <p>Toulouse-Lautrec hollowed out his walking cane and filled it with absinthe, ensuring he'd never be caught without his drink of choice. It was, as one biographer noted, a "crutch that did double duty" — both mobility aid and portable bar.</p>
-        </div>
-
-        <div class="story-box">
-            <h3>Jane Avril: The "Damaged" Muse</h3>
-            <p>His most-painted subject, Jane Avril, was nicknamed <span class="highlight">"Le Mélinite"</span> (French dynamite) for her explosive, possessed dancing style. But her artistry emerged from trauma — she had survived brutal childhood abuse and contracted St. Vitus Dance, which caused facial tics and uncontrollable limb spasms.</p>
-            <p>After being "cured" in a mental hospital, she turned those very symptoms into her signature style. Toulouse-Lautrec and Avril bonded as "damaged goods" — two outcasts who found belonging in Montmartre's demimonde. He painted her more than any other figure.</p>
-        </div>
-
-        <div class="story-box">
-            <h3>The Circus in the Asylum</h3>
-            <p>In 1899, after a very public breakdown in a brothel — where friends found him shooting at invisible spiders, convinced police were hunting him and "ill-meaning dogs" lurked everywhere — his mother had him committed to a private insane asylum.</p>
-            <p>While institutionalized, he produced <span class="highlight">39 circus portraits</span> — some of the most vibrant work of his career, created during three months of confinement.</p>
-        </div>
-
-        <div class="story-box">
-            <h3>Aristocratic Inbreeding's Toll</h3>
-            <p>Toulouse-Lautrec wasn't the only casualty of his family's cousin-marriage tradition. At least three cousins also had dwarfism and congenital defects. One female relative was so fragile she lived her <span class="highlight">entire life in a baby carriage</span>.</p>
-        </div>
-
-        <div class="quote">
-            "Le vieux con!"
-            <cite>— Toulouse-Lautrec's reported last words, referring to his father</cite>
-        </div>
-
-        <div class="story-box">
-            <h3>The "Totalizing" Artist</h3>
-            <p>When performer Yvette Guilbert complained that his paintings didn't capture enough detail of her face, Toulouse-Lautrec replied with what might be his most truthful artistic statement:</p>
-            <p style="font-style: italic; color: var(--gray); margin-top: 1rem;">"Ma chère, I don't detail you, I totalize you."</p>
-        </div>
-
-        <h2>The Final <span class="accent">Collapse</span></h2>
-
-        <p>By 1901, years of alcoholism and tertiary syphilis (contracted from a Montmartre prostitute) took their toll. A series of strokes began in March, leaving him increasingly paralyzed. On September 9, 1901, a final stroke ended his life at just 36 years old.</p>
-
-        <p>His mother, the Comtesse Adèle, would spend the rest of her life ensuring his legacy. She built the <strong style="color: var(--white);">Musée Toulouse-Lautrec</strong> in his hometown of Albi — which today holds the world's most extensive collection of his work: 5,084 drawings, 737 paintings, 363 prints and posters, 275 watercolors, and countless ceramic and glass pieces.</p>
-
-        <div class="intro" style="margin-top: 2.5rem;">
-            <strong>For your gallery opening:</strong> Toulouse-Lautrec's story resonates because he transformed personal suffering into art that captured an era. His paintings of dancers, prostitutes, and performers weren't exploitation — they were empathy from someone who understood what it meant to exist on society's margins.
-        </div>
-
-        <div class="tags">
-            <span class="tag">Art History</span>
-            <span class="tag">Post-Impressionism</span>
-            <span class="tag">Belle Époque</span>
-            <p class="article-note">Research compiled for gallery opening event</p>
-        </div>
-
-        <a href="/" class="back-link"><span class="arrow">←</span> Back to Note Fifteen</a>
     </div>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="site-footer">
         <p>&copy; 2026 Note Fifteen. AI + WordPress. Done Right.</p>
     </footer>
 
