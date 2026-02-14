@@ -176,6 +176,69 @@
             color: var(--white);
         }
 
+        /* AUDIO PLAYER */
+        .audio-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--dark-card);
+            border: 1px solid #2A2A2A;
+            padding: 1rem 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .audio-row .audio-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: var(--yellow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: var(--black);
+            font-weight: 700;
+        }
+
+        .audio-row .audio-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .audio-row .audio-label {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--yellow);
+            line-height: 1.2;
+        }
+
+        .audio-row .audio-title {
+            font-size: 0.85rem;
+            color: var(--gray);
+            line-height: 1.3;
+        }
+
+        .audio-row audio {
+            flex-shrink: 0;
+            height: 36px;
+            max-width: 260px;
+            width: 100%;
+            filter: invert(1) hue-rotate(180deg) brightness(0.85) contrast(1.1);
+        }
+
+        @media (max-width: 600px) {
+            .audio-row {
+                flex-wrap: wrap;
+            }
+
+            .audio-row audio {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+
         /* MYTH BOXES */
         .myth-box {
             background: var(--dark-card);
@@ -395,6 +458,17 @@
 
         <div class="intro">
             <strong>Henri de Toulouse-Lautrec</strong> is immortalized as the chronicler of Parisian nightlife, the creator of iconic Moulin Rouge posters, and the artist who captured the Belle Époque like no other. But beneath the famous imagery lies a life far stranger and more tragic than the myths suggest.
+        </div>
+
+        <div class="audio-row">
+            <div class="audio-icon">▶</div>
+            <div class="audio-info">
+                <div class="audio-label">Podcast</div>
+                <div class="audio-title">How Toulouse-Lautrec Invented Modern Branding</div>
+            </div>
+            <audio controls preload="none">
+                <source src="https://img.quizzydots.com/How_Toulouse-Lautrec_Invented_Modern_Branding.m4a" type="audio/mp4">
+            </audio>
         </div>
 
         <h2>Common <span class="accent">Myths & Misconceptions</span></h2>
